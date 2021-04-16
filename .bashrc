@@ -1,3 +1,16 @@
+#######################################################################
+#                                                                     #
+#                                                                     #
+#           ██████╗  █████╗ ███████╗██╗  ██╗██████╗  ██████╗          #
+#           ██╔══██╗██╔══██╗██╔════╝██║  ██║██╔══██╗██╔════╝          #
+#           ██████╔╝███████║███████╗███████║██████╔╝██║               #
+#           ██╔══██╗██╔══██║╚════██║██╔══██║██╔══██╗██║               #
+#           ██████╔╝██║  ██║███████║██║  ██║██║  ██║╚██████╗          #
+#           ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝          #
+#                                                                     #
+#                                                                     #
+#######################################################################
+
 #moving aliases
 alias o="explorer.exe ."
 alias desktop="cd /mnt/c/Users/User/Desktop"
@@ -15,9 +28,6 @@ alias cz="code ~/.zshrc"
 #shortcuts aliases
 alias srcb="source ~/.bashrc"
 
-find_largest_files() {
-    du -h -x -s -- * | sort -r -h | head -20;
-}
 
 #history formatting
 HISTTIMEFORMAT="%F %T "
@@ -27,13 +37,17 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 #functions
-md () {
+function md () {
     mkdir -p $1
     cd $1
 }
 
 function parse_git_branch () {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
+function find_largest_files() {
+    du -h -x -s -- * | sort -r -h | head -20;
 }
 
 #colors
