@@ -14,6 +14,7 @@
 #moving aliases
 alias o="explorer.exe ."
 alias desktop="cd /mnt/c/Users/User/Desktop"
+alias dev="cd /mnt/f/asac/dev"
 
 #vim aliases
 alias vb="vim ~/.bashrc"
@@ -27,7 +28,6 @@ alias cz="code ~/.zshrc"
 
 #shortcuts aliases
 alias srcb="source ~/.bashrc"
-
 
 #history formatting
 HISTTIMEFORMAT="%F %T "
